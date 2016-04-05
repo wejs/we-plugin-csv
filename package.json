@@ -1,7 +1,7 @@
 {
   "name": "we-plugin-csv",
   "description": "We.js we-plugin-csv plugin",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "main": "plugin.js",
   "scripts": {
     "prepublish": "npm prune"
@@ -9,7 +9,6 @@
   "dependencies": {
     "csv": "^0.4.5"
   },
-  "devDependencies": {},
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
@@ -17,5 +16,6 @@
     "type": "git",
     "url": "git@github.com:wejs/we-plugin-csv.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Alberto Souza <contato@albertosouza.net>"
 }
