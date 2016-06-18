@@ -56,8 +56,10 @@ module.exports = function loadPlugin(projectPath, Plugin) {
   }
 
   // set we.csv after load all plugins
-  plugin.events.on('we:after:load:plugins', function afterLoadCSVPluginAfterLoadPlugins (we){
+  plugin.events.on('we:after:load:plugins', function afterLoadCSVPluginAfterLoadPlugins (we) {
     we.csv = csv;
+
+    we.responses.addResponseFormater('text/csv', plugin.csvResponseFormat);
     we.responses.addResponseFormater('csv', plugin.csvResponseFormat);
   });
 

@@ -1,8 +1,14 @@
 # we-plugin-csv
 
-> We.js plugin do add csv response type and set ``we.csv`` attribute with https://github.com/wdavidw/node-csv module
+We.js plugin do add csv response type and set ``we.csv`` attribute with https://github.com/wdavidw/node-csv module
 
-# Configuration
+## Installation
+
+```sh
+we i we-plugin-csv
+```
+
+## Configuration
 
 ## For responses related to model
 
@@ -46,7 +52,7 @@ http://localhost:4000/user.csv
 
 ## Lib
 
-> See https://github.com/wdavidw/node-csv how will be avaible in ``we.csv``
+- See https://github.com/wdavidw/node-csv how will be avaible in ``we.csv``
 
 
 ## Links
@@ -55,4 +61,4 @@ http://localhost:4000/user.csv
 
 # License
 
-Under [the MIT license](LICENSE.md).
+Under [the MIT license](https://github.com/wejs/we/blob/master/LICENSE.md).

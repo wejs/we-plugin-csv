@@ -1,21 +1,20 @@
 {
   "name": "we-plugin-csv",
-  "description": "We.js we-plugin-csv plugin",
-  "version": "1.0.0",
+  "description": "We.js CSV response format plugin",
+  "version": "1.1.0",
   "main": "plugin.js",
-  "scripts": {
-    "prepublish": "npm prune"
-  },
+  "scripts": {},
   "dependencies": {
     "csv": "^0.4.5"
   },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:wejs/we-plugin-csv.git"
-  },
+  "repository": "wejs/we-plugin-csv",
   "license": "MIT",
-  "author": "Alberto Souza <contato@albertosouza.net>"
+  "author": "Alberto Souza <contato@albertosouza.net>",
+  "keywords": [
+    "csv",
+    "wejs-plugin"
+  ],
+  "author": "Alberto Souza <contato@albertosouza.net>",
+  "license": "MIT",
+  "wejs": {}
 }
