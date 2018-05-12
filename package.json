@@ -5,7 +5,7 @@
   "main": "plugin.js",
   "scripts": {},
   "dependencies": {
-    "csv": "^0.4.5"
+    "csv": "^3.0.2"
   },
   "repository": "wejs/we-plugin-csv",
   "license": "MIT",

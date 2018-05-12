@@ -25,7 +25,18 @@ module.exports = function loadPlugin(projectPath, Plugin) {
   plugin.csvResponseFormat = function csvResponseFormat (req, res){
     var we = req.we;
 
+    if (!res.locals.data) {
+      if (req.headers.accept == req.we.config.defaultResponseType) {
+        return res.status(400).send('Valid reponse format not found');
+      }
+
+      req.headers.accept = req.we.config.defaultResponseType;
+      return res.notFound();
+    }
+
     var columns, records;
+
+
 
     if (Array.isArray(res.locals.data)) {
       records = res.locals.data
@@ -38,9 +49,15 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       columns = res.locals.csvResponseColumns;
     } else if (res.locals.model && we.config.csv.modelColumns[res.locals.model]) {
       columns = we.config.csv.modelColumns[res.locals.model];
-    } else {
+    } else if (res.locals.data && res.locals.data[0]) {
       // try to use the first object attr, this fails for attrs with arrays and objects
-      columns = Object.keys(res.locals.data[0].toJSON());
+      if (res.locals.data[0].toJSON) {
+        columns = Object.keys(res.locals.data[0].toJSON());
+      } else {
+        columns = Object.keys(res.locals.data[0]);
+      }
+    } else {
+      return res.badRequest();
     }
 
     req.we.csv.stringify(records,{
