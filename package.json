@@ -1,7 +1,7 @@
 {
   "name": "we-plugin-csv",
   "description": "We.js CSV response format plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "plugin.js",
   "scripts": {},
   "dependencies": {
@@ -14,7 +14,5 @@
     "csv",
     "wejs-plugin"
   ],
-  "author": "Alberto Souza <contato@albertosouza.net>",
-  "license": "MIT",
   "wejs": {}
 }
